@@ -1,12 +1,11 @@
-{% set currentID = entry.id %}
-
 <ul class="navMain">
-  {% for nav in navigation %}
-    <li class="{% if currentID == nav.id %}active{% endif %}">
-      <a href="{{ nav.url }}">{{ nav.title }}</a>
+
+  {% for i in 0..4 %}
+    <li>
+      <a href="#">Link {{ i }}</a>
     </li>
   {% endfor %}
-  {% include '_atoms/navDropdown' %}
+
 </ul>
 <ul class="navLang">
   {% include '_molecules/langSwitcher' %}

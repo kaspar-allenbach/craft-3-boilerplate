@@ -1,9 +1,6 @@
 {# cheap asset versioning for invalidation #}
 {% set themeVersions = '17.7.2018' %}
 
-{# Dis var calls all the navigation items for all navigations #}
-{% set navigation = craft.entries.id('4,6,12,13').fixedOrder(true).all() %}
-
 {% import '_incl/docMacros' as macro %}
 
 {% if steuerung.enableMaintenance == '1' %}

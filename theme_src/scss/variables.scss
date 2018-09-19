@@ -6,6 +6,7 @@ $txtSecColor: grey;
 $shadowColor: #e6e6e6;
 $linkColor: pink;
 
+$MainFont: 'Barlow Semi Condensed', Helvetica, sans-serif;
 
 @mixin fontSize($sizeValue: 1, $lhValue: 1, $lsValue: 0, $wsValue: 0) {
   font-size: ($sizeValue * 10) + px;
@@ -17,6 +18,7 @@ $linkColor: pink;
   -webkit-font-smoothing: antialiased; //for osx
   -moz-osx-font-smoothing: grayscale; // for osx
   font-weight: normal;
+  font-family: $MainFont;
 }
 
 @mixin fade($fadeValue: color) {

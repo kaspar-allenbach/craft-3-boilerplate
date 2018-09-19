@@ -1,6 +1,6 @@
 {
   "name": "craft3-boilerplate",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "license": "UNLICENSED",
   "author": {
@@ -50,7 +50,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-    "type": "git",
-    "url": "git@gitlab.mt.local:web_software/GLAMOS.git"
+    "type": "github",
+    "url": "https://github.com/kaspar-allenbach/craft-3-boilerplate.git"
   }
 }

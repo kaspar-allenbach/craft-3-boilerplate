@@ -1,4 +1,4 @@
-# GLAMOS – Glacier Monitoring in Switzerland
+# Boilerplate Craft 3 - setup
 
 * Craft 3 Documentation: [Craft 3 Docs](https://docs.craftcms.com/v3/)
 * Twig Template Language: [Twig Symfony](https://twig.symfony.com/doc/2.x/templates.html) [Twig Primer](https://docs.craftcms.com/v3/dev/twig-primer.html)
