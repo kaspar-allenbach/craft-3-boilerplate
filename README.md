@@ -2,6 +2,7 @@
 
 * Craft 3 Documentation: [Craft 3 Docs](https://docs.craftcms.com/v3/)
 * Twig Template Language: [Twig Symfony](https://twig.symfony.com/doc/2.x/templates.html) [Twig Primer](https://docs.craftcms.com/v3/dev/twig-primer.html)
+* Download [Craft CMS](https://craftcms.com/) and copy everything from vendor into this repo. If you want to add the whole cms to your repo remove the line `/vendor` in `.gitignore`
 
 # Craft Templates
 
