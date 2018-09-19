@@ -1,6 +1,0 @@
-{% set sharingUrl = url(craft.app.request.pathInfo) %}
-{% set shareTxt = entry.title ~ ' - ' ~ 'Daten und Fakten' %}
-
-<a href="https://twitter.com/intent/tweet?text={{ shareTxt }}&url={{ sharingUrl }}" class="btn btnSmall">{{  'Teilen auf' | t }} Twitter</a>
-<a href="https://www.linkedin.com/shareArticle?mini=true&url={{ sharingUrl }}" class="btn btnSmall">{{ 'Teilen auf' | t }} Linkedin</a>
-<a href="https://www.facebook.com/sharer/sharer.php?u={{ sharingUrl }}" class="btn btnSmall">{{ 'Teilen auf' | t }} Facebook</a>
