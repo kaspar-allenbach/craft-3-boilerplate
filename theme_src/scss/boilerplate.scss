@@ -2,7 +2,7 @@
 // @import "../../node_modules/jquery.mmenu/dist/jquery.mmenu";
 // @import "../../node_modules/jquery.mmenu/dist/extensions/positioning/jquery.mmenu.positioning";
 // @import "../../node_modules/lightgallery/src/css/lightgallery";
-// @import "../../node_modules/gugus-media-queries/gugus-media-queries";
+@import "../../node_modules/gugus-media-queries/gugus-media-queries";
 
 @import 'variables';
 
@@ -21,7 +21,7 @@
 // @import 'organisms/navigation';
 
 //templates
-@import 'templates/factsheet';
+// @import 'templates/page';
 
 //latest import
 @import 'IEhack';
