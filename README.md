@@ -30,7 +30,7 @@
 # Install on your local environement
 
 * All style assets are in `theme_src` and will be compiled into `www/theme/..`.
-* For Javascript I use Webpack. The webpack directives are split into a `dev` and `production` build.
+* For Javascript I use [Webpack](https://webpack.js.org/). The webpack directives are split into a `dev` and `production` build.
 * css is compiled via `postcss`. The build will be run trough a autoprefixer.
 * **I hate build tools** they are a mistery to me. This setup works so I hope I will never have to touch it again.
 
@@ -41,7 +41,7 @@
 ## Custom environements
 
 * Craft 3 uses [DOTENV](https://docs.craftcms.com/v3/config/environments.html) principle
-* All custom vlaues are stored in a `.env` file which are applied into the files in `config`. The `.env` file mustn't be checked in because the whole idea is to not have any passwords in the repo. Just rename `.env-example` and adjust values accordingly
+* All custom values are stored in a `.env` file which are applied into the files in `config`. The `.env` file mustn't be checked in because the whole idea is to not have any passwords in the repo. Just rename `.env-example` and adjust values accordingly
 
 ## Database
 
