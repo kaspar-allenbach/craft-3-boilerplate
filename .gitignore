@@ -30,3 +30,5 @@ package-lock.json
 /www/theme/css/boilerplate.prebuild.css
 /www/theme/css/boilerplate.min.css.map
 /www/theme/css/boilerplate.min.css
+
+/vendor
