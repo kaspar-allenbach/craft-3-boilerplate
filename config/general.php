@@ -17,10 +17,10 @@ return [
     'cpTrigger' => getenv('CP_TRIGGER'),
     'securityKey' => getenv('SECURITY_KEY'),
     'siteUrl' => [
-        'glamosDe' => getenv('SITE_URL_DE'),
-        'glamosFr' => getenv('SITE_URL_FR'),
-        'glamosEn' => getenv('SITE_URL_EN'),
-        'glamosIt' => getenv('SITE_URL_IT'),
+        'siteHandle' => getenv('SITE_URL_DE'),
+        'siteHandle' => getenv('SITE_URL_FR'),
+        'siteHandle' => getenv('SITE_URL_EN'),
+        'siteHandle' => getenv('SITE_URL_IT'),
     ],
   ],
 
