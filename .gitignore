@@ -17,7 +17,7 @@ npm-debug.log
 package-lock.json
 
 /log/
-/storage/
+/storage
 /.env
 /www/assets/images/
 /www/theme/js/boilerplate.dev.js.map
