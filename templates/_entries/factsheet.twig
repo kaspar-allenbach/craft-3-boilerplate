@@ -1,0 +1,29 @@
+{% extends "_layout" %}
+{% import '_incl/docMacros' as macro %}
+
+
+
+{% block content %}
+
+  <div class="factsheetGrid">
+    <div class="factsheetHead">
+      <h2 class="pageTitle">Aletschgletscher</h2>
+      {% include '_molecules/fieldSearch' %}
+    </div>
+
+    {% include '_molecules/cardMap' %}
+    {% include '_molecules/cardMeasurements' %}
+    {% include '_molecules/cardExport' %}
+    {{ macro.cardChart('Längenänderung', 'chartOne') }}
+    {{ macro.cardChart('Massenbilanz', 'chartTwo') }}
+    {% include '_molecules/cardPhoto' %}
+    {% include '_molecules/cardComment' %}
+
+    {# {{ macro.cardChart('Volumenänderung', 'chartThree') }}
+    {{ macro.cardChart('Eisdicke', 'chartOne') }}
+    {{ macro.cardChart('Geschwindigkeit', 'chartFour') }}
+    {{ macro.cardChart('Firntemperatur', 'chartfive') }} #}
+    
+  </div>
+
+{% endblock %}

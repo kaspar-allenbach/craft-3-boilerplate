@@ -1,0 +1,27 @@
+<div class="outputContainer">
+
+  <div class="chartControls">
+
+    <select class="chartParamSelect" name="chartParamSelect">
+      <option value="">{{ 'Längenänderung' | t }}</option>
+      <option value="">{{ 'Massenbilanz' | t }}</option>
+      <option value="">{{ 'Volumenänderung' | t }}</option>
+      <option value="">{{ 'Eisdicken' | t }}</option>
+      <option value="">{{ 'Geschwindigkeiten' | t }}</option>
+      <option value="">{{ 'Firntemperaturen' | t }}</option>
+    </select>
+
+      <div class="btnGroup">
+        <button class="btn">{{ 'Export PDF' | t }}</button><button class="btn">{{ 'Export CSV' | t }}</button>
+      </div>
+
+
+  </div>
+
+  <div class="chartContainer">
+    <div class="outputChart">Fake Chart (Nicht diese Library nehmen!)
+      <iframe src="//www.gapminder.org/tools/?embedded=true#$chart-type=linechart" style="width: 100%; height: 90%; margin: 0 0 0 0; border: 1px solid grey;" allowfullscreen></iframe>
+    </div>
+  </div>
+
+</div>

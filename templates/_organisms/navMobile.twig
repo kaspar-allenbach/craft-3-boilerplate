@@ -1,0 +1,14 @@
+<nav id="mainMobileNav">
+   <ul>
+     {% for nav in navigation %}
+       <li><a href="{{ nav.url }}">{{ nav.title }} {{ nav.id }}</a></li>
+     {% endfor %}
+     {% include '_atoms/navDropdown' %}
+     <li>
+       <a href="#">{{ 'Sprache' | t }}</a>
+       <ul>
+         {% include '_molecules/langSwitcher' %}
+       </ul>
+     </li>
+   </ul>
+</nav>

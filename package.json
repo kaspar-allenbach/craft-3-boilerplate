@@ -1,0 +1,56 @@
+{
+  "name": "Craft 3 Boilerplate",
+  "version": "0.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "author": {
+    "name": "Kaspar Allenbach - Grafikdesign",
+    "email": "brief@kasparallenbach.ch",
+    "url": "https://kasparallenbach.ch"
+  },
+  "maintainers": [
+    "Kaspar Allenbach <brief@kasparallenbach.ch>"
+  ],
+  "dependencies": {
+    "gugus-media-queries": "^1.1.1",
+    "jquery.mmenu": "^7.0.6",
+    "normalize.css": "^8.0.0",
+    "lazysizes": "^4.0.1",
+    "lightgallery": "^1.6.6"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.2.5",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "compression-webpack-plugin": "^1.1.7",
+    "cssnano": "^3.10.0",
+    "node-sass": "^4.7.2",
+    "parallelshell": "^3.0.1",
+    "postcss": "^6.0.19",
+    "postcss-cli": "^4.1.1",
+    "respimage": "^1.4.2",
+    "watch": "^1.0.2",
+    "webpack": "^3.10.0",
+    "webpack-merge": "^4.1.1"
+  },
+  "scripts": {
+    "clean": "rm -r node_modules/",
+    "build:js": "webpack --config webpack/webpack.prod.config.js",
+    "build:dev:js": "webpack --config webpack/webpack.devbuild.config.js",
+    "build:css": "node-sass --output-style compressed --source-map true theme_src/scss/boilerplate.scss www/theme/css/boilerplate.min.css",
+    "build:dev:css": "node-sass --source-map true theme_src/scss/boilerplate.scss www/theme/css/boilerplate.dev.css",
+    "prebuild:css": "node-sass --source-map true theme_src/scss/boilerplate.scss www/theme/css/boilerplate.prebuild.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 3 versions' --grid true  < www/theme/css/boilerplate.prebuild.css | postcss --use cssnano > www/theme/css/boilerplate.min.css",
+    "watch:js": "webpack --config webpack/webpack.dev.config.js",
+    "watch:css": "watch 'npm run build:dev:css' theme_src/scss",
+    "dev": "parallelshell \"npm run watch:css\" \"npm run watch:js\"",
+    "build": "parallelshell \"npm run build:css\" \"npm run build:js\"",
+    "build:dev": "parallelshell \"npm run build:dev:css\" \"npm run build:dev:js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.mt.local:web_software/GLAMOS.git"
+  }
+}

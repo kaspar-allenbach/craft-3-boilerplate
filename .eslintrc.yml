@@ -1,0 +1,173 @@
+## Airbnb JavaScript Style Guide with less strict rules
+env:
+  browser: true
+  es6: true
+  node: true
+extends: 'eslint:recommended'
+parserOptions:
+  sourceType: module
+rules:
+  indent:
+    - error
+    - 2
+  linebreak-style:
+    - error
+    - unix
+  quotes:
+    - error
+    - single
+    - avoidEscape: true
+      allowTemplateLiterals: true
+  semi:
+    - error
+    - always
+
+  ## 2.1
+  prefer-const: error
+  no-const-assign: error
+  ## 2.2
+  no-var: error
+  ## 3.1
+  no-new-object: error
+  ## 3.3
+  object-shorthand: error
+  ## 3.6
+  quote-props:
+    - error
+    - as-needed
+  ## 4.1
+  no-array-constructor: error
+  ## 4.6
+  array-callback-return: error
+  ## 5.1
+  prefer-destructuring: warn
+  ## 6.3
+  prefer-template: warn
+  ## 6.4
+  no-eval: warn
+  ## 6.5
+  no-useless-escape: warn
+  ## 7.2
+  wrap-iife: error
+  ## 7.3
+  no-loop-func: warn
+  ## 7.6
+  prefer-rest-params: warn
+  ## 7.10
+  no-new-func: warn
+  ## 7.11
+  space-before-function-paren: warn
+  space-before-blocks: warn
+  ## 7.12
+  no-param-reassign: warn
+  ## 7.14
+  prefer-spread: warn
+  ## 7.15
+  function-paren-newline: warn
+  ## 8.1
+  arrow-spacing: error
+  ## 8.2
+  arrow-parens:
+    - error
+    - always
+  arrow-body-style: error
+  ## 8.5
+  no-confusing-arrow: error
+  ## 8.6
+  implicit-arrow-linebreak: error
+  ## 9.5
+  no-useless-constructor: error
+  ## 9.6
+  no-dupe-class-members: error
+  ## 10.4
+  no-duplicate-imports: error
+  import:
+    ## 10.5
+    no-mutable-exports: error
+    ## 10.6
+    prefer-default-export: error
+    ## 10.7
+    first: error
+    ## 10.8
+    no-webpack-loader-syntax: error
+  ## 12.2
+  dot-notation: error
+  ## 13.1
+  no-undef: error
+  ## 13.5
+  no-multi-assign: error
+  ## 13.8
+  no-unused-vars:
+    - warn
+    - args: after-used
+  ## 15.5
+  no-case-declarations: error
+  ## 15.7
+  no-unneeded-ternary: error
+  ## 15.8
+  no-mixed-operators: warn
+  ## 16.3
+  no-else-return: error
+  ## 18.3
+  # spaced-comment: ["warn", "always", { "exceptions": ["-", "+", "eslint"] }]
+  ## 19.3
+  keyword-spacing: error
+  ## 19.4
+  space-infix-ops: error
+  ## 19.6
+  newline-per-chained-call:
+    - error
+    - ignoreChainWithDepth: 3
+  no-whitespace-before-property: error
+  ## 19.8
+  padded-blocks:
+    - error
+    - never
+  ## 19.9
+  space-in-parens: error
+  ## 19.10
+  array-bracket-spacing: error
+  ## 19.12
+  max-len:
+    - warn
+    - code: 100
+      ignoreUrls: true
+      ignoreStrings: true
+      ignoreTemplateLiterals: true
+      ignoreRegExpLiterals: true
+  ## 19.13
+  block-spacing: error
+  ## 19.14
+  comma-spacing: error
+  ## 19.16
+  func-call-spacing: error
+  key-spacing:
+    - error
+    - beforeColon: false
+      afterColon: true
+  ## 19.18
+  no-trailing-spaces:
+    - warn
+    - ignoreComments: true
+      skipBlankLines: true
+  ## 19.19
+  no-multiple-empty-lines: warn
+  ## 20.1
+  comma-style: error
+  ## 22.2
+  no-new-wrappers: warn
+  ## 22.3
+  radix: error
+  ## 23.1
+  id-length:
+    - warn
+    - exceptions: [e, i]
+  ## 23.3
+  new-cap: error
+
+  ## Best practices
+  no-empty:
+    - error
+    - allowEmptyCatch: true
+  no-sparse-arrays: 0
+  no-useless-concat: warn

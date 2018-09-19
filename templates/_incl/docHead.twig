@@ -1,0 +1,22 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+  {% if not craft.app.config.general.devMode %}
+    <link href="/theme/css/glamos.min.css?version={{ themeVersions }}" rel="stylesheet">
+  {% else %}
+    <link href="/theme/css/glamos.dev.css" rel="stylesheet">
+  {% endif %}
+
+  {% include '_organisms/SeoPage' %}
+  {% include '_incl/docFavicons' %}
+  {% include '_incl/docWebfont' %}
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>

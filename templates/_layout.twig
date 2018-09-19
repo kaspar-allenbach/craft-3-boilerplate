@@ -1,0 +1,27 @@
+{# cheap asset versioning for invalidation #}
+{% set themeVersions = '17.7.2018' %}
+
+{# Dis var calls all the navigation items for all navigations #}
+{% set navigation = craft.entries.id('4,6,12,13').fixedOrder(true).all() %}
+
+{% import '_incl/docMacros' as macro %}
+
+{% if steuerung.enableMaintenance == '1' %}
+  {# {% if not user and craft.config.environment == 'live' %} #}
+    {% redirect "maintenance" %}
+  {# {% endif %} #}
+{% endif %}
+
+	<!doctype html>
+  <html lang="{{ craft.app.language }}">
+    {% include '_incl/docHead' %}
+    <body class="{{ entry.section.handle }}">
+      {% include '_organisms/navMain' %}
+      {% include '_organisms/navMobile' %}
+      <div class="content">{% block content %}{# all the content #}{% endblock %}</div>
+      {% if entry.section.handle != 'mapViewer'%}
+        {% include '_incl/docFooter' %}
+      {% endif %}
+    	{% include '_incl/docScripts' %}
+    </body>
+  </html>

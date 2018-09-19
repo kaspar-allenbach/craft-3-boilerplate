@@ -1,0 +1,13 @@
+
+  {% for site in currentSite.group.sites %}
+    <li class="{% if currentSite.id == site.id %}activeLang{% endif %}">
+      {% set url = alias(site.baseUrl) %}
+      {% if entry is defined %}
+        {% set entryForOtherSite = craft.entries.id(entry.id).site(site).one() %}
+        {% if entryForOtherSite %}
+          {% set url = entryForOtherSite.getUrl() %}
+        {% endif %}
+      {% endif %}
+      <a href="{{ url }}">{{ site.name }}</a>
+    </li>
+  {% endfor %}

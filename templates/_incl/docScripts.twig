@@ -1,0 +1,7 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+{% if not craft.app.config.general.devMode %}
+  <script src="/theme/js/glamos.min.js?version={{ themeVersions }}"></script>
+{% else %}
+  <script src="/theme/js/glamos.dev.js"></script>
+{% endif %}

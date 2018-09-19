@@ -1,0 +1,8 @@
+{% import '_incl/docMacros' as macro %}
+
+{% for block in entry.pageText.all() %}
+  {% switch block.type %}
+    {% case "mxTxt" %}
+    <div class="{{ block.cellColumn}} {{ block.cellColumnOffset}}">{{ macro.richText(block.cellTxt)}}</div>
+  {% endswitch %}
+{% endfor %}

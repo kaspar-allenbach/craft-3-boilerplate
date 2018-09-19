@@ -1,0 +1,57 @@
+$mainColor: #45CADD;
+
+$txtColor: rgba(0, 0, 0, 0.75);
+$txtInvert: white;
+$txtSecColor: grey;
+$shadowColor: #e6e6e6;
+$linkColor: pink;
+
+
+@mixin fontSize($sizeValue: 1, $lhValue: 1, $lsValue: 0, $wsValue: 0) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+  line-height: $lhValue;
+  font-feature-settings:"kern" 1;
+  letter-spacing: $lsValue + em;
+  word-spacing: $wsValue + em;
+  -webkit-font-smoothing: antialiased; //for osx
+  -moz-osx-font-smoothing: grayscale; // for osx
+  font-weight: normal;
+}
+
+@mixin fade($fadeValue: color) {
+  transition: $fadeValue 0.3s linear;
+  -webkit-transition: $fadeValue 0.3s linear;
+  -moz-transition: $fadeValue 0.3s linear;
+}
+
+body {
+  background-color: #fff;
+}
+%hyphenate {
+  hyphens: auto;
+}
+%verticalList {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  //justify-content: space-between;
+}
+
+%boxShadow {
+  -webkit-box-shadow: 3px 5px 5px 0px $shadowColor;
+  -moz-box-shadow: 3px 5px 5px 0px $shadowColor;
+  box-shadow: 3px 5px 5px 0px $shadowColor;
+}
+
+html, *, body {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+img {
+  width: 100%;
+}

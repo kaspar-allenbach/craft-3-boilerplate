@@ -1,0 +1,65 @@
+{% import '_incl/docMacros' as macro %}
+
+<!doctype html>
+<html class="no-js" lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Glamos</title>
+  <meta name="robots" content="noindex" />
+  <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Barlow', sans-serif;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-align-content: stretch;
+      -ms-flex-line-pack: stretch;
+      align-content: stretch;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #45CADD;
+    }
+    /*
+        yellow: rgb(252, 200, 57)
+        grün: rgb(75, 126, 147)
+     */
+     img {
+       width: 300px;
+       padding-bottom: 20px;
+     }
+     a {
+       color: rgb(75, 126, 147);
+     }
+     a:hover {
+       text-decoration: none;
+     }
+     p {
+      font-size: 20px;
+      line-height: 1.5;
+      max-width: 400px;
+     }
+
+  </style>
+
+</head>
+
+<body>
+  <img src="x.png" alt="Glamos Logo">
+  {{ macro.richText(steuerung.maintenanceText) }}
+</body>
+
+</html>
