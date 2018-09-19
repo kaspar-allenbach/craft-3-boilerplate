@@ -29,6 +29,11 @@
 
 # Install on your local environement
 
+* All style assets are in `theme_src` and will be compiled into `www/theme/..`.
+* For Javascript I use Webpack. The webpack directives are split into a `dev` and `production` build.
+* css is compiled via `postcss`. The build will be run trough a autoprefixer.
+* **I hate build tools** they are a mistery to me. This setup works so I hope I will never have to touch it again.
+
 ## Build
 
 * on dev environements run: `npm i` once and then for development: `npm run dev`
