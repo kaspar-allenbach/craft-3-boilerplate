@@ -14,8 +14,8 @@
 # Styles (SCSS)
 
 * Stylesheets are also separated according to the [Atomic Design Pattern](https://patternlab.io/) (Although it doesn't work as nicely as in the twig markup)
-* There is no Framework in place. It is all custom CSCC
-* The stylesheet `IEhack.scss` is applied on IE 11 and contains all adjustments. Pleas place IE stuf only there.
+* It is 2018 how about not using a frmawork? Use [CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)  instead. It is awesome!
+* The stylesheet `IEhack.scss` is applied on IE 11 and contains all adjustments. Pleas place IE stuf only there. I now browser detection is a evil thing. but what can you do?
 * For npm package specific styling there is a `plugins.scss` for ugly overrides (e.g. Lightbox Plugin).
 
 ## SCSS Layouting
