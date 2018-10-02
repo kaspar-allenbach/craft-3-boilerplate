@@ -19,6 +19,11 @@
 * The stylesheet `IEhack.scss` is applied on IE 11 and contains all adjustments. Pleas place IE stuf only there. I now browser detection is a evil thing. but what can you do?
 * For npm package specific styling there is a `plugins.scss` for ugly overrides (e.g. Lightbox Plugin).
 
+### Webfonts
+
+* I load Webfoints via the [Google Webfont Loader](https://github.com/typekit/webfontloader)
+* The initial Webfont styles are loaded as inline css before the actual stylesheet for more speed and less FOUT (see `_incl/docWebfont`). I use [Joni Korpis Trick for smoother font load](https://jonikorpi.com/a-smoother-page-load/)
+
 ## SCSS Layouting
 
 * All layouts are made with either grid or flexbox
