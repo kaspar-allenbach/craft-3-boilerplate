@@ -16,6 +16,10 @@ return [
     'omitScriptNameInUrls' => true,
     'cpTrigger' => getenv('CP_TRIGGER'),
     'securityKey' => getenv('SECURITY_KEY'),
+    'aliases' => [
+      '@assetSiteUrl' => getenv('ASSET_SITE_URL'),
+      '@assetSiteRoot' => getenv('ASSET_SITE_ROOT'),
+    ],
     'siteUrl' => [
         'siteHandle' => getenv('SITE_URL_DE'),
         'siteHandle' => getenv('SITE_URL_FR'),
