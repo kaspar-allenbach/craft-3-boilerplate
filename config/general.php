@@ -12,10 +12,10 @@ return [
   // Global settings
   '*' => [
     'defaultWeekStartDay' => 1,
-    'enableCsrfProtection' => true,
     'omitScriptNameInUrls' => true,
     'cpTrigger' => getenv('CP_TRIGGER'),
     'securityKey' => getenv('SECURITY_KEY'),
+    'useProjectConfigFile' => true,
     'aliases' => [
       '@assetSiteUrl' => getenv('ASSET_SITE_URL'),
       '@assetSiteRoot' => getenv('ASSET_SITE_ROOT'),
