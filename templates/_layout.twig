@@ -1,0 +1,18 @@
+{# cheap asset versioning for invalidation #}
+{% set themeVersions = '17.7.2018' %}
+
+{% import '_incl/docMacros' as macro %}
+
+  <!doctype html>
+  <html lang="{{ craft.app.language }}">
+    {% include '_incl/docHead' %}
+    <body class="{{ entry.section.handle }}">
+      {% include '_organisms/navMain' %}
+      {% include '_organisms/navMobile' %}
+      <div class="content">{% block content %}{# all the content #}{% endblock %}</div>
+      {% if entry.section.handle != 'mapViewer'%}
+        {% include '_incl/docFooter' %}
+      {% endif %}
+    	{% include '_incl/docScripts' %}
+    </body>
+  </html>

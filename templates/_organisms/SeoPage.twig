@@ -1,0 +1,70 @@
+{# Page title with fallback #}
+{%- set pageTitle -%}
+  {{ entry.title }} - {% if entry.seoTitle %}{{ entry.seoTitle }}{% else %}{{ seo.seoTitle }}{% endif %}
+{%- endset -%}
+
+{# Page suffix without fallback #}
+{%- set pageSuffix -%}
+  {% if seo.seoSuffix %} | {{ seo.seoSuffix }}{% endif %}
+{%- endset -%}
+
+{# Page description with fallback #}
+{%- set pageDescription -%}
+  {% if entry.seoDescription %}{{ entry.seoDescription }}{% else %}{{ seo.seoDescription }}{% endif %}
+{%- endset -%}
+
+{# HREFLANG composition #}
+{% set hrefLangPage %}
+  {% for site in currentSite.group.sites %}
+      {% set url = alias(site.baseUrl) %}
+      {% if entry is defined %}
+        {% set entryForOtherSite = craft.entries.id(entry.id).site(site).one() %}
+        {% if entryForOtherSite %}{% set url = entryForOtherSite.getUrl() %}{% endif %}
+      {% endif %}
+      <link rel="alternate" href="{{ url }}" hreflang="{{ site.language|replace('de-CH', 'x-default') | lower }}" />
+      <meta property="og:locale{% if site.language != 'de-CH'%}:alternate{% endif %}" content="{{ site.language|replace('-', '_') }}"/>
+  {% endfor %}
+{% endset %}
+
+{# seo image with fallback #}
+{% set pageImage %}
+  {% if entry.seoImage.exists() %}
+    {% for asset in entry.seoImage.all() %}
+      <meta property="og:image" content="{{ asset.url }}" />
+    {% endfor %}
+  {% else %}
+    {% for asset in seo.seoImage.all() %}
+      <meta property="og:image" content="{{ asset.url }}" />
+    {% endfor %}
+  {% endif %}
+{% endset %}
+
+{# Googlebot Trigger #}
+{%- set robots -%}
+  {% if entry.enableCrawling == '1' %}
+    <meta name="robots" content="all" />
+  {% else %}
+    <meta name="robots" content="none" />
+  {% endif %}
+{%- endset -%}
+
+{# call all seo tags #}
+
+
+<title>{{ pageTitle }}{{ pageSuffix }}</title>
+<meta name="description" content="{{ pageDescription }}" />
+
+{# Facebook #}
+<meta property="og:site_name" content="{{ siteName }}"/>
+<meta property="og:title" content="{{ pageTitle }}{{ pageSuffix }}"/>
+<meta property="og:url" content="{{ entry.url }}"/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="{{ currentSite.language|replace('-', '_') }}"/>
+
+{# Twitter #}
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@yourHandle" />
+<meta name="twitter:creator" content="@yourHandle" />
+
+{{ pageImage }}
+{{ hrefLangPage }}

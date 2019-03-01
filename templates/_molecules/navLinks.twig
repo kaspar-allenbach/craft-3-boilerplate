@@ -1,0 +1,12 @@
+<ul class="navMain">
+
+  {% for i in 0..4 %}
+    <li>
+      <a href="#">Link {{ i }}</a>
+    </li>
+  {% endfor %}
+
+</ul>
+<ul class="navLang">
+  {% include '_molecules/langSwitcher' %}
+</ul>

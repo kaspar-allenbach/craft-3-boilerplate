@@ -1,0 +1,7 @@
+{% macro textField(macroParam) %}
+  {{ macroParam | nl2br | raw }}
+{% endmacro %}
+
+{% macro richText(string) %}
+  {{ string | striptags('<p><a><strong><br><ul><li><em>')  | raw }}
+{% endmacro %}

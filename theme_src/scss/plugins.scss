@@ -1,0 +1,16 @@
+// lightgallery plugins backdrop
+
+.lg-backdrop {
+  background-color: rgba($mainColor, .4);
+}
+.lg-toolbar {
+  background-color: transparent;
+}
+#lg-counter {
+  @extend %fontL;
+  font-weight: 700;
+}
+#lg-counter, .lg-toolbar .lg-icon, .lg-actions .lg-next, .lg-actions .lg-prev {
+  color: $txtColor;
+  background-color: transparent;
+}
