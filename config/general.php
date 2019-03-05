@@ -17,8 +17,8 @@ return [
     'securityKey' => getenv('SECURITY_KEY'),
     'useProjectConfigFile' => true,
     'aliases' => [
-      '@assetSiteUrl' => getenv('ASSET_SITE_URL'),
-      '@assetSiteRoot' => getenv('ASSET_SITE_ROOT'),
+      'assetSiteUrl' => getenv('ASSET_SITE_URL'),
+      'assetSiteRoot' => getenv('ASSET_SITE_ROOT'),
     ],
     'siteUrl' => [
         'siteHandle' => getenv('SITE_URL_DE'),
