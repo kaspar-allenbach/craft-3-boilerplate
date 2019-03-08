@@ -5,3 +5,28 @@
 {% macro richText(string) %}
   {{ string | striptags('<p><a><strong><br><ul><li><em>')  | raw }}
 {% endmacro %}
+
+
+{% macro oneImage(handleParam) %}
+  {% set image = handleParam %}
+
+  {% if handleParam | length %}
+    {% if handleParam.extension == 'svg' %}
+      {{ svg(image) }}
+    {% else %}
+
+      {% set transformedImages = craft.imager.transformImage(image, [
+        { width: 1024 }, { width: 512 }, { width: 300 },
+        ], { jpegQuality: 80 }) %}
+
+      <img
+        data-sizes="auto"
+        src="{{ craft.imager.placeholder() }}"
+        data-srcset="{{ craft.imager.srcset(transformedImages) }}"
+        alt="{{ image.title }}"
+        class="lazyload" />
+    {% endif %}
+
+  {% endif %}
+
+{% endmacro %}
