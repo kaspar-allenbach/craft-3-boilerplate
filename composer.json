@@ -19,10 +19,13 @@
     "rss": "https://craftcms.com/changelog.rss"
   },
   "require": {
-    "craftcms/cms": "3.1.15",
+    "craftcms/cms": "3.1.30",
     "vlucas/phpdotenv": "^2.4.0",
     "mmikkel/cp-clearcache": "1.0.2",
+    "lucasbares/craft-emailobfuscator": "2.1.0",
+    "nystudio107/craft-minify": "1.2.9",
     "craftcms/redactor": "2.1.6",
+    "aelvan/imager": "v2.1.10"
   },
   "autoload": {
     "psr-4": {
