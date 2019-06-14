@@ -4,13 +4,6 @@ Thumbs.db
 .DS_Store
 !.gitkeep
 
-# Vagrant
-/.vagrant/
-∕provisioning/includes/
-/provisioning/????-??-??.sql
-/provisioning/*.crt
-**/ubuntu-*-cloudimg-console.log
-
 # NPM
 /node_modules/
 npm-debug.log
@@ -19,7 +12,7 @@ package-lock.json
 /log/
 /storage
 /.env
-/www/assets/images/
+/www/assets/
 /www/theme/js/boilerplate.dev.js.map
 /www/theme/js/boilerplate.dev.js
 /www/theme/css/boilerplate.dev.css.map
