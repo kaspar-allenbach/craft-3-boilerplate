@@ -16,6 +16,7 @@ return [
     'cpTrigger' => getenv('CP_TRIGGER'),
     'securityKey' => getenv('SECURITY_KEY'),
     'useProjectConfigFile' => true,
+    'convertFilenamesToAscii' => true,
     'aliases' => [
       'assetSiteUrl' => getenv('ASSET_SITE_URL'),
       'assetSiteRoot' => getenv('ASSET_SITE_ROOT'),
