@@ -41,7 +41,7 @@
     "build:css": "run-s prebuild:css prefix:css",
     "build:dev:css": "node-sass --source-map true theme_src/scss/boilerplate.scss www/theme/css/boilerplate.dev.css",
     "prebuild:css": "node-sass --source-map true theme_src/scss/boilerplate.scss www/theme/css/boilerplate.prebuild.css",
-    "prefix:css": "postcss --use autoprefixer -b 'last 3 versions' --grid true  < www/theme/css/boilerplate.prebuild.css | postcss --use cssnano > www/theme/css/boilerplate.min.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 3 versions' --grid true  < www/theme/css/boilerplate.prebuild.css | postcss --use cssnano  --m -o  www/theme/css/boilerplate.min.css",
     "watch:js": "webpack --config webpack/webpack.dev.config.js",
     "watch:css": "watch 'npm run build:dev:css' theme_src/scss",
     "dev": "run-p watch:css watch:js",
