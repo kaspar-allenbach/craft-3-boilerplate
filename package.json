@@ -44,9 +44,9 @@
     "prefix:css": "postcss --use autoprefixer -b 'last 3 versions' --grid true  < www/theme/css/boilerplate.prebuild.css | postcss --use cssnano > www/theme/css/boilerplate.min.css",
     "watch:js": "webpack --config webpack/webpack.dev.config.js",
     "watch:css": "watch 'npm run build:dev:css' theme_src/scss",
-    "dev": "run-p --parallel watch:css watch:js",
-    "build": "run-p --parallel build:css build:js",
-    "build:dev": "run-p --parallel build:dev:css build:dev:js",
+    "dev": "run-p watch:css watch:js",
+    "build": "run-p build:css build:js",
+    "build:dev": "run-p build:dev:css build:dev:js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
