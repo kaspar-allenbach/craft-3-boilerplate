@@ -15,7 +15,7 @@
     "gugus-media-queries": "^1.1.1",
     "jquery.mmenu": "^7.0.6",
     "normalize.css": "^8.0.0",
-    "lazysizes": "^4.0.1",
+    "lazysizes": "^5.2.2",
     "lightgallery": "^1.6.6"
   },
   "devDependencies": {
